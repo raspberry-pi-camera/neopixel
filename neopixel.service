@@ -1,0 +1,11 @@
+[Unit]
+Description=Neopixel state
+After=basic.target
+
+[Service]
+Type=simple
+ExecStart=/opt/raspindi/bin/neopixel
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
