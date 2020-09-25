@@ -15,7 +15,7 @@ ORDER = neopixel.GRB
 
 statepath = "/tmp/neopixel.state"
 
-version = "1.0.0"
+version = "1.1.0"
 
 if len(sys.argv) > 1:
     if sys.argv[1] == "-v":
@@ -81,25 +81,31 @@ while(not gc.kill_now):
         pixels.fill((255,255,255))
         pixels.show()
     if (state == "N"):
-        pixels.fill((255,255,255))
-        pixels[5] = (0,0,0)
-        pixels[11] = (0,0,0)
-        pixels[17] = (0,0,0)
-        pixels[23] = (0,0,0)
+        # pixels.fill((255,255,255))
+        # pixels[5] = (0,0,0)
+        # pixels[11] = (0,0,0)
+        # pixels[17] = (0,0,0)
+        # pixels[23] = (0,0,0)
+        pixels.fill((0,0,0))
         pixels.show()
     if (state == "P"):
-        pixels.fill((255,255,255))
-        pixels[5] = (0,255,0)
-        pixels[11] = (0,255,0)
-        pixels[17] = (0,255,0)
-        pixels[23] = (0,255,0)
+        # pixels.fill((255,255,255))
+        # pixels[5] = (0,255,0)
+        # pixels[11] = (0,255,0)
+        # pixels[17] = (0,255,0)
+        # pixels[23] = (0,255,0)
+        pixels.fill((0,255,0))
         pixels.show()
     if (state == "L"):
-        pixels.fill((255,255,255))
-        pixels[5] = (255,0,0)
-        pixels[11] = (255,0,0)
-        pixels[17] = (255,0,0)
-        pixels[23] = (255,0,0)
+        # pixels.fill((255,255,255))
+        # pixels[5] = (255,0,0)
+        # pixels[11] = (255,0,0)
+        # pixels[17] = (255,0,0)
+        # pixels[23] = (255,0,0)
+        pixels.fill((255,0,0))
+        pixels.show()
+    if (state == "T"):
+        pixels.fill((0,0,255))
         pixels.show()
     if (state == "S"):
         j += 1
