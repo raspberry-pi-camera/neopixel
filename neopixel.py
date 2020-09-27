@@ -15,7 +15,7 @@ ORDER = neopixel.GRB
 
 statepath = "/tmp/neopixel.state"
 
-version = "1.1.0"
+version = "1.1.1"
 
 if len(sys.argv) > 1:
     if sys.argv[1] == "-v":
@@ -105,7 +105,12 @@ while(not gc.kill_now):
         pixels.fill((255,0,0))
         pixels.show()
     if (state == "T"):
-        pixels.fill((0,0,255))
+        for i in range(23):
+            if i % 2 == 0:
+                pixels[i] = (255,0,0)
+            else:
+                pixels[i] = (0,255,0)
+        # pixels.fill((255,0,0))
         pixels.show()
     if (state == "S"):
         j += 1
